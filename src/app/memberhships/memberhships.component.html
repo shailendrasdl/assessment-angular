@@ -1,0 +1,32 @@
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Membership Name</th>
+        <th scope="col">Plan Cost</th>
+        <th scope="col">Duration</th>
+        <th scope="col">Pics per Item Inventory</th>
+        <th scope="col">Inventory</th>
+        <th scope="col">Ranking</th>
+        <th scope="col">Description</th>
+        <th scope="col">Plan Duration</th>
+        <th scope="col">Show Interests</th>
+        <th scope="col">Active</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let post of posts.memberships"  routerLink="/membership_detail/{{post.membership_id}}">
+            <td>{{ post.membership_id }}</td>
+            <td>{{ post.membership_name}}</td>
+           <td>{{ post.membership_plan_cost }}</td>
+           <td>{{ post.membership_plan_duration }}
+           <td>{{ post.pics_per_item_inventory }}</td>
+           <td>{{ post.total_item_inventory }}</td>
+           <td>{{ post.ranking }}</td>
+           <td>{{post.description}}</td>
+           <td>{{post.membership_plan_duration}}</td>
+           <td>{{post.show_interests}}</td>
+           <td>{{post.is_active}}</td>
+      </tr>
+    </tbody>
+  </table>
